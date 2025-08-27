@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeTIK Blog</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <!-- bagian atas -->
+    <header  id="home">
+      <div class="left">
+        <h2 class="logo">Perpustakaan Umum Kabupaten Bekasi</h2>
+      </div>
+      <div class="right">
+        <nav>
+                 
+          <ul>
+            <li>   <button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li><a href="#card">Overview</a></li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="semantik.html">Location</a>
+            </li>
+            <li>
+              <a href="login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+        <div class="hero">
+      <div class="hero-left">
+        <h2 class="hero-title" id="typing-title">Perpustakaan Umum Kabupaten Bekasi
+</h2>
+        <p class="hero-description">
+Aims to promote literacy, provide access to educational resources, and support lifelong learning for residents. If you're nearby and curious, it might be worth visiting to explore what services they offer firsthand.
+        </p>
+        <button class="hero-button">Read</button>
+      </div>
+      <div class="hero-right">
+        <img src="programmer.svg" alt="" class="hero-image" />
+      </div>
+      
+    </div>
+    <main>
+      <a href="#home"><button class="homebtn">🔝</button></a>
+      <h2 class="hero-subtitle">Overview</h2>
+      <div class="container" id="card">
+
+        
+      </div>
+      <div class="project-grid">
+      <div class="project-card">
+  <div class="project-image">
+    <img src="quiet.png" alt="Project Name">
+  </div>
+  <div class="project-content">
+    <h3>Reading rooms and quiet study areas</h3>
+    <div class="project-details">
+<p>A dedicated space for reading and studying quietly, away from distractions.</p>
+
+    </div>
+    
+  </div>
+  </div>
+  
+        <div class="project-card">
+  <div class="project-image">
+    <img src="book.png" alt="Project Name">
+  </div>
+  <div class="project-content">
+    <h3>Collections of books, magazines, and newspapers
+</h3>
+    <div class="project-details">
+      <p>A collection of various reading materials available for borrowing.</p>
+
+
+    </div>
+  </div>
+  </div>
+          <div class="project-card">
+  <div class="project-image">
+    <img src="post.png" alt="Project Name">
+  </div>
+  <div class="project-content">
+    <h3>Mario on table</h3>
+    <div class="project-details">
+      <p>i dunno why i made this..</p>
+
+    </div>
+
+    </div>
+    </div>
+            <div class="project-card">
+  <div class="project-image">
+    <img src="semantic.png" alt="Project Name">
+  </div>
+  <div class="project-content">
+    <h3>A low effort semantic Website</h3>
+    <div class="project-details">
+      <p>absolute low effort.</p>
+
+    </div>
+    
+    </div>
+    </div>
+    </div>
+   <h2 class="hero-subtitle" id="gallery">Gallery</h2>
+
+    <div class="picture-grid">
+     
+        <div><img src="book.png" alt=""></div>
+      <div><img src="quiet.png" alt=""></div>
+      <div><img src="anak.png" alt=""></div>
+      <div><img src="baca.png" alt=""></div>
+      <div><img src="buku.png" alt=""></div>
+      <div><img src="kursi.png" alt=""></div>
+      <div><img src="lemari.png" alt=""></div>
+      <div><img src="pitung.png" alt=""></div>
+      <div><img src="majalah.png" alt=""></div>
+      <div><img src="poster.png" alt=""></div>
+      <div><img src="parkiran.png" alt=""></div>
+      <div><img src="luar.png" alt=""></div>
+      <div><img src="namafilegambar.png" alt=""></div>
+
+   
+      
+    </div>
+    <h2 class="hero-subtitle">Location</h2>
+    <div class="di">
+      <p>📍 Location: Jl. Gatot Subroto No.5, Karangasih, Cikarang Utara, Bekasi, Jawa Barat 175302</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.5143925575902!2d107.14983630106518!3d-6.256146506780507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6984fd69d140d9%3A0xe07e5eb5dfcaf837!2sPerpustakaan%20Umum%20Kabupaten%20Bekasi!5e0!3m2!1sid!2sid!4v1756240950215!5m2!1sid!2sid" width="1000" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </main>
+    
+    <footer class="row">
+      <p>&copy; 2023 Ucup Inc. Hak cipta dilindungi undang-undang.</p>
+    </footer>
+        <script>
+    const btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
+      btn.textContent = document.body.classList.contains('dark-theme') ?'☀️':'🌙';
+    });
+        const text = "Perpustakaan Umum Kabupaten Bekasi – Library Overview";
+    const title = document.getElementById("typing-title");
+    let i = 0;
+    function typeWriter() {
+      if (i <= text.length) {
+        title.textContent = text.slice(0, i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    typeWriter();
+    </script>
+
+ </body>
+</html>
