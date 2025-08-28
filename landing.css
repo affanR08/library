@@ -117,8 +117,13 @@
         width: 500px;
         animation: fadeInUp 1s ease-in-out forwards;
       }/* tampilan layar hp */
-@media screen and (max-width:725px) {
-  
+@media screen and (max-width:825px) {
+  .homebtn{
+    opacity: 0.7;
+    transform: scale(0.9);
+    top: 59vw;
+  }
+
 
     header {
         flex-direction: column;
@@ -494,6 +499,7 @@ font-size: 45px;
 color: rgb(130, 76, 255);
 background-color: #118ab2;
 cursor: pointer;
+opacity: 0.8;
 }
 .homebtn:hover{
   background-color: #6bbee2;
@@ -515,4 +521,14 @@ cursor: pointer;
 .di p{
   font-size: 30px;
   font-weight: bold;
+}
+@media screen and(max-width:725px){
+    .di p{
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .di iframe{
+    width: 60%;
+  }
+  
 }
