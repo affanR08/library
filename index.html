@@ -63,6 +63,7 @@ Aims to promote literacy, provide access to educational resources, and support l
     <h3>Reading rooms and quiet study areas</h3>
     <div class="project-details">
 <p>A dedicated space for reading and studying quietly, away from distractions.</p>
+<p>Equipped with comfortable seating and ample natural light.</p>
 
     </div>
     
@@ -78,6 +79,7 @@ Aims to promote literacy, provide access to educational resources, and support l
 </h3>
     <div class="project-details">
       <p>A collection of various reading materials available for borrowing.</p>
+      <p>📰 Includes the latest magazines and newspapers.</p>
 
 
     </div>
@@ -110,6 +112,17 @@ Aims to promote literacy, provide access to educational resources, and support l
     </div>
     
     </div>
+    </div>
+    </div>
+    <h2 class="hero-subtitle">Description</h2>
+    <div class="desc">
+      
+      <p>Perpustakaan Umum Kabupaten Bekasi is dedicated to providing a wide range of resources and services to the community. Our mission is to promote literacy, support education, and foster a love for reading among all residents.</p>
+      <img src="quiet.png" alt="Library Image">
+    </div>
+    <div class="desc">
+      <img src="baca.png" alt="">
+      <p>Our reading area is designed to be cozy and inviting, with comfortable seating and warm lighting to create the perfect atmosphere for diving into a good book.</p>
     </div>
     </div>
    <h2 class="hero-subtitle" id="gallery">Gallery</h2>
@@ -148,6 +161,13 @@ Aims to promote literacy, provide access to educational resources, and support l
     btn.addEventListener('click', function() {
       document.body.classList.toggle('dark-theme');
       btn.textContent = document.body.classList.contains('dark-theme') ?'☀️':'🌙';
+      if (body.classList.contains('dark-theme')) {
+    body.classList.remove('dark-theme');
+    localStorage.setItem('dark-theme', 'disabled'); // Simpan preferensi
+  } else {
+    body.classList.add('dark-theme');
+    localStorage.setItem('dark-theme', 'enabled');
+  }
     });
         const text = "Perpustakaan Umum Kabupaten Bekasi – Library Overview";
     const title = document.getElementById("typing-title");
@@ -160,6 +180,27 @@ Aims to promote literacy, provide access to educational resources, and support l
       }
     }
     typeWriter();
+    // Mendapatkan waktu saat ini
+const currentHour = new Date().getHours();
+
+// Jika waktu antara pukul 18:00 hingga 06:00, aktifkan mode malam
+if (currentHour >= 18 || currentHour < 6) {
+  document.body.classList.add('dark-theme');
+}
+// Cek preferensi yang tersimpan di localStorage
+if (localStorage.getItem('dark-theme') === 'enabled') {
+  document.body.classList.add('dark-theme');
+}
+// Tambahkan event listener untuk tombol
+toggleButton.addEventListener('click', () => {
+  if (body.classList.contains('dark-theme')) {
+    body.classList.remove('dark-theme');
+    localStorage.setItem('dark-theme', 'disabled'); // Simpan preferensi
+  } else {
+    body.classList.add('dark-theme');
+    localStorage.setItem('dark-theme', 'enabled'); // Simpan preferensi
+  }
+});
     </script>
 
  </body>
